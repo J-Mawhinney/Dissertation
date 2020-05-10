@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Accomodation Finder | Off Campus</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="offcampusV2.css">
+<script src="script.js"></script>
+</head>
+<body id = "accomodationfinder">
+
+<nav>
+  <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+  <h1> Accomodation Finder </h1>
+</nav>
+
+<main class = "filter">
+
+      <input id="all" type="checkbox" />
+      <input id="room1" type="checkbox" />
+      <input id="room2" type="checkbox" />
+      <input id="room3" type="checkbox" />
+      <input id="room4" type="checkbox" />
+      <input id="price1" type="checkbox" />
+      <input id="price2" type="checkbox" />
+      <input id="price3" type="checkbox" />
+      <input id="price4" type="checkbox" />
+      <input id="available1" type="checkbox" />
+      <input id="available2" type="checkbox" />
+      <input id="available3" type="checkbox" />
+      <input id="available4" type="checkbox" />
+      <input id="campus1" type="checkbox" />
+      <input id="campus2" type="checkbox" />
+      <input id="campus3" type="checkbox" />
+      <input id="campus4" type="checkbox" />
+      <input id="city1" type="checkbox" />
+      <input id="city2" type="checkbox" />
+      <input id="city3" type="checkbox" />
+      <input id="city4" type="checkbox" />
+
+
+      <div class="filter__control">
+        <h3>Filter</h3>
+        <section class = "cluster">
+        <label class="filter__button" for="all">All</label>
+        </section>
+
+        <section class = "cluster">
+          <p> Price (Weekly) </p>
+        <label class="filter__button" for="price1">Less than £70</label>
+        <label class="filter__button" for="price2">£70-£89</label>
+        <label class="filter__button" for="price3">£90-£109</label>
+        <label class="filter__button" for="price4">£110 or more</label>
+        </section>
+
+        <section class = "cluster">
+          <p> Rooms </p>
+        <label class="filter__button" for="room1">1 Room</label>
+        <label class="filter__button" for="room2">2 Rooms</label>
+        <label class="filter__button" for="room3">3 Rooms</label>
+        <label class="filter__button" for="room4">4 Rooms+</label>
+        </section>
+
+
+        <section class = "cluster">
+          <p> Currently empty rooms: </p>
+        <label class="filter__button" for="available1">1 Room</label>
+        <label class="filter__button" for="available2">2 Rooms</label>
+        <label class="filter__button" for="available3">3 Rooms</label>
+        <label class="filter__button" for="available4">4 Rooms+</label>
+        </section>
+
+
+        <section class = "cluster">
+          <p> Distance from Campus </p>
+        <label class="filter__button" for="campus1">less than 500ft</label>
+        <label class="filter__button" for="campus2">500ft - 999ft</label>
+        <label class="filter__button" for="campus3">1000ft - 1499ft</label>
+        <label class="filter__button" for="campus4">1500ft or more</label>
+        </section>
+
+        <section class = "cluster">
+          <p> Distance from Ormskirk City Centre </p>
+        <label class="filter__button" for="city1">less than 500ft</label>
+        <label class="filter__button" for="city2">500ft - 999ft</label>
+        <label class="filter__button" for="city3">1000ft - 1499ft</label>
+        <label class="filter__button" for="city4">1500ft or more</label>
+        </section>
+
+      </div>
+
+      <div class="filter__content">
+
+
+        <ul class="filter__list">
+          <li class="filter__item" data-filter="price3 room4 available2 campus3 city2"><span>
+            <img src="images/property1.jpg" alt="">
+        </span>
+
+        <div class = "b">
+            <a href="https://www.propertypal.com/"><img src="images/property1.jpg" alt=""></a>
+            <table>
+              <td> Property 1 </td>
+              <tr>
+                <th> Price: </th>
+                <td> £92pw </td>
+              </tr>
+              <tr>
+                <th> Rooms: </th>
+                <td> 4 </td>
+              </tr>
+              <tr>
+                <th> Currently available Rooms: </th>
+                <td> 2 </td>
+              </tr>
+              <tr>
+                <th> Distance from Campus: </th>
+                <td> 1350ft </td>
+              </tr>
+              <tr>
+                <th> Distance from City Centre: </th>
+                <td> 600ft </td>
+              </tr>
+              <tr>
+                <th> Property Type: </th>
+                <td> House </td>
+              </tr>
+              <tr>
+                <th> Landlord: </th>
+                <td> SSU Accomodations </td>
+              </tr>
+            </table>
+          </div>
+
+        </li>
+          <li class="filter__item" data-filter="price3 room3 available1 campus3 city1"><span>
+            <img src="images/property2.jpg" alt="">
+       </span>
+
+       <div class = "b">
+           <a href="https://www.propertypal.com/"><img src="images/property2.jpg" alt=""></a>
+           <table>
+             <td> Property 2 </td>
+             <tr>
+               <th> Price: </th>
+               <td> £108pw </td>
+             </tr>
+             <tr>
+               <th> Rooms: </th>
+               <td> 3 </td>
+             </tr>
+             <tr>
+               <th> Currently available Rooms: </th>
+               <td> 1 </td>
+             </tr>
+             <tr>
+               <th> Distance from Campus: </th>
+               <td> 1000ft </td>
+             </tr>
+             <tr>
+               <th> Distance from City Centre: </th>
+               <td> 350ft </td>
+             </tr>
+             <tr>
+               <th> Property Type: </th>
+               <td> House </td>
+             </tr>
+             <tr>
+               <th> Landlord: </th>
+               <td> SSU Accomodations </td>
+             </tr>
+           </table>
+         </div>
+
+     </li>
+          <li class="filter__item" data-filter="price2 room4 available2 campus3 city2"><span>
+            <img src="images/property3.jpg" alt="">
+       </span>
+
+       <div class = "b">
+           <a href="https://www.propertypal.com/"><img src="images/property3.jpg" alt=""></a>
+           <table>
+             <td> Property 3 </td>
+             <tr>
+               <th> Price: </th>
+               <td> £72pw </td>
+             </tr>
+             <tr>
+               <th> Rooms: </th>
+               <td> 5 </td>
+             </tr>
+             <tr>
+               <th> Currently available Rooms: </th>
+               <td> 2 </td>
+             </tr>
+             <tr>
+               <th> Distance from Campus: </th>
+               <td> 1200ft </td>
+             </tr>
+             <tr>
+               <th> Distance from City Centre: </th>
+               <td> 500ft </td>
+             </tr>
+             <tr>
+               <th> Property Type: </th>
+               <td> House </td>
+             </tr>
+             <tr>
+               <th> Landlord: </th>
+               <td> SSU Accomodations </td>
+             </tr>
+           </table>
+         </div>
+
+
+     </li>
+          <li class="filter__item" data-filter="price4 room2 available2 campus1 city1"><span>
+            <img src="images/property4.jpg" alt="">
+          </span>
+
+        <div class = "b">
+            <a href="https://www.propertypal.com/"><img src="images/property4.jpg" alt=""></a>
+            <table>
+              <td> Property 4 </td>
+              <tr>
+                <th> Price: </th>
+                <td> £135pw </td>
+              </tr>
+              <tr>
+                <th> Rooms: </th>
+                <td> 2 </td>
+              </tr>
+              <tr>
+                <th> Currently available Rooms: </th>
+                <td> 2 </td>
+              </tr>
+              <tr>
+                <th> Distance from Campus: </th>
+                <td> 200ft </td>
+              </tr>
+              <tr>
+                <th> Distance from City Centre: </th>
+                <td> 400ft </td>
+              </tr>
+              <tr>
+                <th> Property Type: </th>
+                <td> House </td>
+              </tr>
+              <tr>
+                <th> Landlord: </th>
+                <td> SSU Accomodations </td>
+              </tr>
+            </table>
+          </div>
+      </li>
+
+        <li class="filter__item" data-filter="price3 room4 available4 campus1 city1"><span>
+          <img src="images/property5.jpg" alt="">
+     </span>
+
+     <div class = "b">
+         <a href="https://www.propertypal.com/"><img src="images/property5.jpg" alt=""></a>
+         <table>
+           <td> Property 5 </td>
+           <tr>
+             <th> Price: </th>
+             <td> £100pw </td>
+           </tr>
+           <tr>
+             <th> Rooms: </th>
+             <td> 4 </td>
+           </tr>
+           <tr>
+             <th> Currently available Rooms: </th>
+             <td> 4 </td>
+           </tr>
+           <tr>
+             <th> Distance from Campus: </th>
+             <td> 300ft </td>
+           </tr>
+           <tr>
+             <th> Distance from City Centre: </th>
+             <td> 300ft </td>
+           </tr>
+           <tr>
+             <th> Property Type: </th>
+             <td> House </td>
+           </tr>
+           <tr>
+             <th> Landlord: </th>
+             <td> SSU Accomodations </td>
+           </tr>
+         </table>
+       </div>
+      </li>
+
+        <li class="filter__item" data-filter="price3 room3 available0 campus2 city1"><span>
+          <img src="images/property6.jpg" alt="">
+     </span>
+
+     <div class = "b">
+         <a href="https://www.propertypal.com/"><img src="images/property6.jpg" alt=""></a>
+         <table>
+           <td> Property 6 </td>
+           <tr>
+             <th> Price: </th>
+             <td> £99pw </td>
+           </tr>
+           <tr>
+             <th> Rooms: </th>
+             <td> 3 </td>
+           </tr>
+           <tr>
+             <th> Currently available Rooms: </th>
+             <td> 0 </td>
+           </tr>
+           <tr>
+             <th> Distance from Campus: </th>
+             <td> 750ft </td>
+           </tr>
+           <tr>
+             <th> Distance from City Centre: </th>
+             <td> 450ft </td>
+           </tr>
+           <tr>
+             <th> Property Type: </th>
+             <td> House </td>
+           </tr>
+           <tr>
+             <th> Landlord: </th>
+             <td> SSU Accomodations </td>
+           </tr>
+         </table>
+       </div>
+
+   </li>
+
+        <li class="filter__item" data-filter="price2 room6 available2 campus1 city2"><span>
+          <img src="images/property7.jpg" alt="">
+      </span>
+
+      <div class = "b">
+          <a href="https://www.propertypal.com/"><img src="images/property7.jpg" alt=""></a>
+          <table>
+            <td> Property 7 </td>
+            <tr>
+              <th> Price: </th>
+              <td> £85pw </td>
+            </tr>
+            <tr>
+              <th> Rooms: </th>
+              <td> 6 </td>
+            </tr>
+            <tr>
+              <th> Currently available Rooms: </th>
+              <td> 2 </td>
+            </tr>
+            <tr>
+              <th> Distance from Campus: </th>
+              <td> 450ft </td>
+            </tr>
+            <tr>
+              <th> Distance from City Centre: </th>
+              <td> 700ft </td>
+            </tr>
+            <tr>
+              <th> Property Type: </th>
+              <td> House </td>
+            </tr>
+            <tr>
+              <th> Landlord: </th>
+              <td> SSU Accomodations </td>
+            </tr>
+          </table>
+        </div>
+    </li>
+
+      <li class="filter__item" data-filter="price1 room4 available4 campus4 city4"><span>
+        <img src="images/property8.jpg" alt="">
+   </span>
+
+   <div class = "b">
+       <a href="https://www.propertypal.com/"><img src="images/property8.jpg" alt=""></a>
+       <table>
+         <td> Property 8 </td>
+         <tr>
+           <th> Price: </th>
+           <td> £69pw </td>
+         </tr>
+         <tr>
+           <th> Rooms: </th>
+           <td> 5 </td>
+         </tr>
+         <tr>
+           <th> Currently available Rooms: </th>
+           <td> 4 </td>
+         </tr>
+         <tr>
+           <th> Distance from Campus: </th>
+           <td> 2000ft </td>
+         </tr>
+         <tr>
+           <th> Distance from City Centre: </th>
+           <td> 1700ft </td>
+         </tr>
+         <tr>
+           <th> Property Type: </th>
+           <td> House </td>
+         </tr>
+         <tr>
+           <th> Landlord: </th>
+           <td> SSU Accomodations </td>
+         </tr>
+       </table>
+     </div>
+ </li>
+
+      <li class="filter__item" data-filter="price4 room3 available2 campus1 city1"><span>
+        <img src="images/property9.jpg" alt="">
+   </span>
+
+   <div class = "b">
+       <a href="https://www.propertypal.com/"><img src="images/property9.jpg" alt=""></a>
+       <table>
+         <td> Property 9 </td>
+         <tr>
+           <th> Price: </th>
+           <td> £140pw </td>
+         </tr>
+         <tr>
+           <th> Rooms: </th>
+           <td> 3 </td>
+         </tr>
+         <tr>
+           <th> Currently available Rooms: </th>
+           <td> 2 </td>
+         </tr>
+         <tr>
+           <th> Distance from Campus: </th>
+           <td> 150ft </td>
+         </tr>
+         <tr>
+           <th> Distance from City Centre: </th>
+           <td> 50ft </td>
+         </tr>
+         <tr>
+           <th> Property Type: </th>
+           <td> House </td>
+         </tr>
+         <tr>
+           <th> Landlord: </th>
+           <td> SSU Accomodations </td>
+         </tr>
+       </table>
+     </div>
+
+ </li>
+      <li class="filter__item" data-filter="price4 room4 available0 campus2 city1"><span>
+        <img src="images/property10.jpg" alt="">
+    </span>
+
+    <div class = "b">
+      <a href="https://www.propertypal.com/"><img src="images/property10.jpg" alt=""></a>
+        <table>
+          <td> Property 10 </td>
+          <tr>
+            <th> Price: </th>
+            <td> £110pw </td>
+          </tr>
+          <tr>
+            <th> Rooms: </th>
+            <td> 4 </td>
+          </tr>
+          <tr>
+            <th> Currently available Rooms: </th>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <th> Distance from Campus: </th>
+            <td> 500ft </td>
+          </tr>
+          <tr>
+            <th> Distance from City Centre: </th>
+            <td> 400ft </td>
+          </tr>
+          <tr>
+            <th> Property Type: </th>
+            <td> House </td>
+          </tr>
+          <tr>
+            <th> Landlord: </th>
+            <td> SSU Accomodations </td>
+          </tr>
+        </table>
+      </div>
+
+      <li class="filter__item" data-filter="price1 room4 available1 campus2 city3"><span>
+        <img src="images/property11.jpg" alt="">
+    </span>
+
+    <div class = "b">
+        <a href="https://www.propertypal.com/"><img src="images/property11.jpg" alt=""></a>
+        <table>
+          <td> Property 11 </td>
+          <tr>
+            <th> Price: </th>
+            <td> £65pw </td>
+          </tr>
+          <tr>
+            <th> Rooms: </th>
+            <td> 4 </td>
+          </tr>
+          <tr>
+            <th> Currently available Rooms: </th>
+            <td> 1 </td>
+          </tr>
+          <tr>
+            <th> Distance from Campus: </th>
+            <td> 900ft </td>
+          </tr>
+          <tr>
+            <th> Distance from City Centre: </th>
+            <td> 1200ft </td>
+          </tr>
+          <tr>
+            <th> Property Type: </th>
+            <td> House </td>
+          </tr>
+          <tr>
+            <th> Landlord: </th>
+            <td> SSU Accomodations </td>
+          </tr>
+        </table>
+      </div>
+  </li>
+
+  <li class="filter__item" data-filter="price4 room4 available4 campus4 city4"><span>
+    <img src="images/property12.jpg" alt="">
+</span>
+
+<div class = "b">
+    <a href="https://www.propertypal.com/"><img src="images/property12.jpg" alt=""></a>
+    <table>
+      <td> Property 12 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £125pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 6 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 6 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 1700ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 1750ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </div>
+
+  <li class="filter__item" data-filter="price2 room3 available3 campus2 city1"><span>
+    <img src="images/property13.jpg" alt="">
+</span>
+
+<div class = "b">
+    <a href="https://www.propertypal.com/"><img src="images/property13.jpg" alt=""></a>
+    <table>
+      <td> Property 13 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £85pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 3 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 3 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 780ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 420ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </div>
+
+  <li class="filter__item" data-filter="price2 room4 available2 campus1 city1"><span>
+    <img src="images/property14.jpg" alt="">
+</span>
+
+<div class = "b">
+    <a href="https://www.propertypal.com/"><img src="images/property14.jpg" alt=""></a>
+    <table>
+      <td> Property 14 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £90pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 4 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 2 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 75ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 100ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </div>
+
+  <li class="filter__item" data-filter="price2 room4 available3 campus2 city2"><span>
+    <img src="images/property15.jpg" alt="">
+</span>
+
+<div class = "b">
+    <a href="https://www.propertypal.com/"><img src="images/property15.jpg" alt=""></a>
+    <table>
+      <td> Property 15 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £79pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 5 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 3 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 1000ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 650ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </div>
+
+  <li class="filter__item" data-filter="price4 room4 available0 campus2 city1"><span>
+    <img src="images/property16.jpg" alt="">
+</span>
+
+<div class = "b">
+    <a href="https://www.propertypal.com/"><img src="images/property16.jpg" alt=""></a>
+    <table>
+      <td> Property 16 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £130pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 4 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 0 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 800ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 400ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </div>
+
+  <li class="filter__item" data-filter="price3 room4 available1 campus3 city2"><span>
+    <img src="images/property17.jpg" alt="">
+  </span>
+
+  <div class = "b">
+      <a href="https://www.propertypal.com/"><img src="images/property17.jpg" alt=""></a>
+      <table>
+        <td> Property 17 </td>
+        <tr>
+          <th> Price: </th>
+          <td> £99pw </td>
+        </tr>
+        <tr>
+          <th> Rooms: </th>
+          <td> 4 </td>
+        </tr>
+        <tr>
+          <th> Currently available Rooms: </th>
+          <td> 1 </td>
+        </tr>
+        <tr>
+          <th> Distance from Campus: </th>
+          <td> 1000ft </td>
+        </tr>
+        <tr>
+          <th> Distance from City Centre: </th>
+          <td> 800ft </td>
+        </tr>
+        <tr>
+          <th> Property Type: </th>
+          <td> House </td>
+        </tr>
+        <tr>
+          <th> Landlord: </th>
+          <td> SSU Accomodations </td>
+        </tr>
+      </table>
+    </div>
+
+
+      <li class="filter__item" data-filter="price3 room4 available1 campus2 city2"><span>
+        <img src="images/property18.jpg" alt="">
+    </span>
+
+      <div class = "b">
+          <a href="https://www.propertypal.com/"><img src="images/property18.jpg" alt=""></a>
+          <table>
+            <td> Property 18 </td>
+            <tr>
+              <th> Price: </th>
+              <td> £100pw </td>
+            </tr>
+            <tr>
+              <th> Rooms: </th>
+              <td> 5 </td>
+            </tr>
+            <tr>
+              <th> Currently available Rooms: </th>
+              <td> 1 </td>
+            </tr>
+            <tr>
+              <th> Distance from Campus: </th>
+              <td> 900ft </td>
+            </tr>
+            <tr>
+              <th> Distance from City Centre: </th>
+              <td> 600ft </td>
+            </tr>
+            <tr>
+              <th> Property Type: </th>
+              <td> House </td>
+            </tr>
+            <tr>
+              <th> Landlord: </th>
+              <td> SSU Accomodations </td>
+            </tr>
+          </table>
+        </div>
+
+        <li class="filter__item" data-filter="price4 room4 available0 campus1 city1"><span>
+          <img src="images/property19.jpg" alt="">
+      </span>
+
+        <div class = "b">
+            <a href="https://www.propertypal.com/"><img src="images/property19.jpg" alt=""></a>
+            <table>
+              <td> Property 19 </td>
+              <tr>
+                <th> Price: </th>
+                <td> £110pw </td>
+              </tr>
+              <tr>
+                <th> Rooms: </th>
+                <td> 4 </td>
+              </tr>
+              <tr>
+                <th> Currently available Rooms: </th>
+                <td> 0 </td>
+              </tr>
+              <tr>
+                <th> Distance from Campus: </th>
+                <td> 300ft </td>
+              </tr>
+              <tr>
+                <th> Distance from City Centre: </th>
+                <td> 300ft </td>
+              </tr>
+              <tr>
+                <th> Property Type: </th>
+                <td> House </td>
+              </tr>
+              <tr>
+                <th> Landlord: </th>
+                <td> SSU Accomodations </td>
+              </tr>
+            </table>
+          </div>
+
+          <li class="filter__item" data-filter="price2 room3 available3 campus2 city1"><span>
+            <img src="images/property20.jpg" alt="">
+          </span>
+
+          <div class = "b">
+              <a href="https://www.propertypal.com/"><img src="images/property20.jpg" alt=""></a>
+              <table>
+                <td> Property 20 </td>
+                <tr>
+                  <th> Price: </th>
+                  <td> £79pw </td>
+                </tr>
+                <tr>
+                  <th> Rooms: </th>
+                  <td> 3 </td>
+                </tr>
+                <tr>
+                  <th> Currently available Rooms: </th>
+                  <td> 3 </td>
+                </tr>
+                <tr>
+                  <th> Distance from Campus: </th>
+                  <td> 600ft </td>
+                </tr>
+                <tr>
+                  <th> Distance from City Centre: </th>
+                  <td> 350ft </td>
+                </tr>
+                <tr>
+                  <th> Property Type: </th>
+                  <td> House </td>
+                </tr>
+                <tr>
+                  <th> Landlord: </th>
+                  <td> SSU Accomodations </td>
+                </tr>
+              </table>
+            </div>
+
+            <li class="filter__item" data-filter="price4 room2 available2 campus1 city1"><span>
+              <img src="images/property21.jpg" alt="">
+          </span>
+
+            <div class = "b">
+                <a href="https://www.propertypal.com/"><img src="images/property21.jpg" alt=""></a>
+                <table>
+                  <td> Property 21 </td>
+                  <tr>
+                    <th> Price: </th>
+                    <td> £150pw </td>
+                  </tr>
+                  <tr>
+                    <th> Rooms: </th>
+                    <td> 2 </td>
+                  </tr>
+                  <tr>
+                    <th> Currently available Rooms: </th>
+                    <td> 2 </td>
+                  </tr>
+                  <tr>
+                    <th> Distance from Campus: </th>
+                    <td> 400ft </td>
+                  </tr>
+                  <tr>
+                    <th> Distance from City Centre: </th>
+                    <td> 200ft </td>
+                  </tr>
+                  <tr>
+                    <th> Property Type: </th>
+                    <td> House </td>
+                  </tr>
+                  <tr>
+                    <th> Landlord: </th>
+                    <td> SSU Accomodations </td>
+                  </tr>
+                </table>
+              </div>
+
+              <li class="filter__item" data-filter="price2 room4 available2 campus2 city2"><span>
+                <img src="images/property22.jpg" alt="">
+            </span>
+
+              <div class = "b">
+                  <a href="https://www.propertypal.com/"><img src="images/property22.jpg" alt=""></a>
+                  <table>
+                    <td> Property 22 </td>
+                    <tr>
+                      <th> Price: </th>
+                      <td> £89pw </td>
+                    </tr>
+                    <tr>
+                      <th> Rooms: </th>
+                      <td> 6 </td>
+                    </tr>
+                    <tr>
+                      <th> Currently available Rooms: </th>
+                      <td> 2 </td>
+                    </tr>
+                    <tr>
+                      <th> Distance from Campus: </th>
+                      <td> 600ft </td>
+                    </tr>
+                    <tr>
+                      <th> Distance from City Centre: </th>
+                      <td> 750ft </td>
+                    </tr>
+                    <tr>
+                      <th> Property Type: </th>
+                      <td> House </td>
+                    </tr>
+                    <tr>
+                      <th> Landlord: </th>
+                      <td> SSU Accomodations </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <li class="filter__item" data-filter="price3 room4 available0 campus2 city1"><span>
+                  <img src="images/property23.jpg" alt="">
+              </span>
+
+                <div class = "b">
+                    <a href="https://www.propertypal.com/"><img src="images/property23.jpg" alt=""></a>
+                    <table>
+                      <td> Property 23 </td>
+                      <tr>
+                        <th> Price: </th>
+                        <td> £95pw </td>
+                      </tr>
+                      <tr>
+                        <th> Rooms: </th>
+                        <td> 4 </td>
+                      </tr>
+                      <tr>
+                        <th> Currently available Rooms: </th>
+                        <td> 0 </td>
+                      </tr>
+                      <tr>
+                        <th> Distance from Campus: </th>
+                        <td> 600ft </td>
+                      </tr>
+                      <tr>
+                        <th> Distance from City Centre: </th>
+                        <td> 200ft </td>
+                      </tr>
+                      <tr>
+                        <th> Property Type: </th>
+                        <td> House </td>
+                      </tr>
+                      <tr>
+                        <th> Landlord: </th>
+                        <td> SSU Accomodations </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <li class="filter__item" data-filter="price3 room4 available2 campus2 city1"><span>
+                    <img src="images/property24.jpg" alt="">
+                </span>
+
+                  <div class = "b">
+                      <a href="https://www.propertypal.com/"><img src="images/property24.jpg" alt=""></a>
+                      <table>
+                        <td> Property 24 </td>
+                        <tr>
+                          <th> Price: </th>
+                          <td> £90pw </td>
+                        </tr>
+                        <tr>
+                          <th> Rooms: </th>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <th> Currently available Rooms: </th>
+                          <td> 2 </td>
+                        </tr>
+                        <tr>
+                          <th> Distance from Campus: </th>
+                          <td> 500ft </td>
+                        </tr>
+                        <tr>
+                          <th> Distance from City Centre: </th>
+                          <td> 200ft </td>
+                        </tr>
+                        <tr>
+                          <th> Property Type: </th>
+                          <td> House </td>
+                        </tr>
+                        <tr>
+                          <th> Landlord: </th>
+                          <td> SSU Accomodations </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <li class="filter__item" data-filter="price4 room3 available3 campus3 city3"><span>
+                      <img src="images/property25.jpg" alt="">
+                  </span>
+
+                    <div class = "b">
+                        <a href="https://www.propertypal.com/"><img src="images/property25.jpg" alt=""></a>
+                        <table>
+                          <td> Property 25 </td>
+                          <tr>
+                            <th> Price: </th>
+                            <td> £125pw </td>
+                          </tr>
+                          <tr>
+                            <th> Rooms: </th>
+                            <td> 3 </td>
+                          </tr>
+                          <tr>
+                            <th> Currently available Rooms: </th>
+                            <td> 3 </td>
+                          </tr>
+                          <tr>
+                            <th> Distance from Campus: </th>
+                            <td> 1000ft </td>
+                          </tr>
+                          <tr>
+                            <th> Distance from City Centre: </th>
+                            <td> 1200ft </td>
+                          </tr>
+                          <tr>
+                            <th> Property Type: </th>
+                            <td> House </td>
+                          </tr>
+                          <tr>
+                            <th> Landlord: </th>
+                            <td> SSU Accomodations </td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <li class="filter__item" data-filter="price4 room4 available0 campus1 city1"><span>
+                        <img src="images/property26.jpg" alt="">
+                    </span>
+
+                      <div class = "b">
+                          <a href="https://www.propertypal.com/"><img src="images/property26.jpg" alt=""></a>
+                          <table>
+                            <td> Property 26 </td>
+                            <tr>
+                              <th> Price: </th>
+                              <td> £110pw </td>
+                            </tr>
+                            <tr>
+                              <th> Rooms: </th>
+                              <td> 5 </td>
+                            </tr>
+                            <tr>
+                              <th> Currently available Rooms: </th>
+                              <td> 0 </td>
+                            </tr>
+                            <tr>
+                              <th> Distance from Campus: </th>
+                              <td> 200ft </td>
+                            </tr>
+                            <tr>
+                              <th> Distance from City Centre: </th>
+                              <td> 200ft </td>
+                            </tr>
+                            <tr>
+                              <th> Property Type: </th>
+                              <td> House </td>
+                            </tr>
+                            <tr>
+                              <th> Landlord: </th>
+                              <td> SSU Accomodations </td>
+                            </tr>
+                          </table>
+                        </div>
+
+                        <li class="filter__item" data-filter="price2 room4 available2 campus2 city1"><span>
+                          <img src="images/property27.jpg" alt="">
+                      </span>
+
+                      <div class = "b">
+                          <a href="https://www.propertypal.com/"><img src="images/property27.jpg" alt=""></a>
+                          <table>
+                            <td> Property 27 </td>
+                            <tr>
+                              <th> Price: </th>
+                              <td> £72pw </td>
+                            </tr>
+                            <tr>
+                              <th> Rooms: </th>
+                              <td> 4 </td>
+                            </tr>
+                            <tr>
+                              <th> Currently available Rooms: </th>
+                              <td> 2 </td>
+                            </tr>
+                            <tr>
+                              <th> Distance from Campus: </th>
+                              <td> 860ft </td>
+                            </tr>
+                            <tr>
+                              <th> Distance from City Centre: </th>
+                              <td> 270ft </td>
+                            </tr>
+                            <tr>
+                              <th> Property Type: </th>
+                              <td> House </td>
+                            </tr>
+                            <tr>
+                              <th> Landlord: </th>
+                              <td> SSU Accomodations </td>
+                            </tr>
+                          </table>
+                        </div>
+
+                        <li class="filter__item" data-filter="price3 room4 available4 campus3 city3"><span>
+                          <img src="images/property28.jpg" alt="">
+                      </span>
+
+                      <div class = "b">
+                          <a href="https://www.propertypal.com/"><img src="images/property28.jpg" alt=""></a>
+                          <table>
+                            <td> Property 28 </td>
+                            <tr>
+                              <th> Price: </th>
+                              <td> £102pw </td>
+                            </tr>
+                            <tr>
+                              <th> Rooms: </th>
+                              <td> 4 </td>
+                            </tr>
+                            <tr>
+                              <th> Currently available Rooms: </th>
+                              <td> 4 </td>
+                            </tr>
+                            <tr>
+                              <th> Distance from Campus: </th>
+                              <td> 1000ft </td>
+                            </tr>
+                            <tr>
+                              <th> Distance from City Centre: </th>
+                              <td> 1000ft </td>
+                            </tr>
+                            <tr>
+                              <th> Property Type: </th>
+                              <td> House </td>
+                            </tr>
+                            <tr>
+                              <th> Landlord: </th>
+                              <td> SSU Accomodations </td>
+                            </tr>
+                          </table>
+                        </div>
+
+        </ul>
+      </div>
+
+</main>
+
+
+</body>
+</html>

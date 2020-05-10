@@ -1,0 +1,735 @@
+body {
+  max-width: 100vw;
+  max-height: 1100px;
+  margin: 0;
+  overflow: visible;
+  background: #eee;
+}
+
+nav {
+  display: grid;
+  max-width: 100%;
+  background-color: #671E75;
+  height: 1350px;
+}
+
+nav > a {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: auto;
+  padding-top: 10px;
+  position: absolute;
+}
+
+nav img {
+  max-width: 10vw;
+  margin: auto;
+  padding: 10%;
+}
+
+#accomodationfinder nav > h1 {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  transform: rotate(-90deg) translateX(-100%) translateY(-30%);
+  max-height: 100%;
+  font-size: 32px;
+  white-space: nowrap;
+  margin-left: -60px;
+  margin-right: -60px;
+  position: absolute;
+
+}
+
+
+
+
+
+
+#accomodationfinder {
+display: grid;
+grid-template-columns: 1fr 7fr;
+grid-template-rows: 1fr 5fr;
+}
+
+#accomodationfinder main {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  height: 1100px;
+  max-width: 80vw;
+  grid-template-columns: 15% 85%;
+}
+
+
+
+
+
+.vh, .filter input[type="checkbox"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  width: 1px;
+}
+.hide-item, input[type="checkbox"]#room1:checked ~ .filter__content .filter__item:not([data-filter*="room1"]),
+input[type="checkbox"]#room2:checked ~ .filter__content .filter__item:not([data-filter*="room2"]),
+input[type="checkbox"]#room3:checked ~ .filter__content .filter__item:not([data-filter*="room3"]),
+input[type="checkbox"]#room4:checked ~ .filter__content .filter__item:not([data-filter*="room4"]),
+input[type="checkbox"]#price1:checked ~ .filter__content .filter__item:not([data-filter*="price1"]),
+input[type="checkbox"]#price2:checked ~ .filter__content .filter__item:not([data-filter*="price2"]),
+input[type="checkbox"]#price3:checked ~ .filter__content .filter__item:not([data-filter*="price3"]),
+input[type="checkbox"]#price4:checked ~ .filter__content .filter__item:not([data-filter*="price4"]),
+input[type="checkbox"]#available1:checked ~ .filter__content .filter__item:not([data-filter*="available1"]),
+input[type="checkbox"]#available2:checked ~ .filter__content .filter__item:not([data-filter*="available2"]),
+input[type="checkbox"]#available3:checked ~ .filter__content .filter__item:not([data-filter*="available3"]),
+input[type="checkbox"]#available4:checked ~ .filter__content .filter__item:not([data-filter*="available4"]),
+input[type="checkbox"]#campus1:checked ~ .filter__content .filter__item:not([data-filter*="campus1"]),
+input[type="checkbox"]#campus2:checked ~ .filter__content .filter__item:not([data-filter*="campus2"]),
+input[type="checkbox"]#campus3:checked ~ .filter__content .filter__item:not([data-filter*="campus3"]),
+input[type="checkbox"]#campus4:checked ~ .filter__content .filter__item:not([data-filter*="campus4"]),
+input[type="checkbox"]#city1:checked ~ .filter__content .filter__item:not([data-filter*="city1"]),
+input[type="checkbox"]#city2:checked ~ .filter__content .filter__item:not([data-filter*="city2"]),
+input[type="checkbox"]#city3:checked ~ .filter__content .filter__item:not([data-filter*="city3"]),
+input[type="checkbox"]#city4:checked ~ .filter__content .filter__item:not([data-filter*="city4"]){
+  width: 0;
+  transition: 0s 0.2s;
+  /*display: none;          * SAVE FOR MOBILE VERSION*/
+}
+
+.hide-item span, input[type="checkbox"]#room1:checked ~ .filter__content .filter__item:not([data-filter*="room1"]) span,
+input[type="checkbox"]#room2:checked ~ .filter__content .filter__item:not([data-filter*="room2"]) span,
+input[type="checkbox"]#room3:checked ~ .filter__content .filter__item:not([data-filter*="room3"]) span,
+input[type="checkbox"]#room4:checked ~ .filter__content .filter__item:not([data-filter*="room4"]) span,
+input[type="checkbox"]#price1:checked ~ .filter__content .filter__item:not([data-filter*="price1"]) span,
+input[type="checkbox"]#price2:checked ~ .filter__content .filter__item:not([data-filter*="price2"]) span,
+input[type="checkbox"]#price3:checked ~ .filter__content .filter__item:not([data-filter*="price3"]) span,
+input[type="checkbox"]#price4:checked ~ .filter__content .filter__item:not([data-filter*="price4"]) span,
+input[type="checkbox"]#available1:checked ~ .filter__content .filter__item:not([data-filter*="available1"]) span,
+input[type="checkbox"]#available2:checked ~ .filter__content .filter__item:not([data-filter*="available2"]) span,
+input[type="checkbox"]#available3:checked ~ .filter__content .filter__item:not([data-filter*="available3"]) span,
+input[type="checkbox"]#available4:checked ~ .filter__content .filter__item:not([data-filter*="available4"]) span,
+input[type="checkbox"]#campus1:checked ~ .filter__content .filter__item:not([data-filter*="campus1"]) span,
+input[type="checkbox"]#campus2:checked ~ .filter__content .filter__item:not([data-filter*="campus2"]) span,
+input[type="checkbox"]#campus3:checked ~ .filter__content .filter__item:not([data-filter*="campus3"]) span,
+input[type="checkbox"]#campus4:checked ~ .filter__content .filter__item:not([data-filter*="campus4"]) span,
+input[type="checkbox"]#city1:checked ~ .filter__content .filter__item:not([data-filter*="city1"]) span,
+input[type="checkbox"]#city2:checked ~ .filter__content .filter__item:not([data-filter*="city2"]) span,
+input[type="checkbox"]#city3:checked ~ .filter__content .filter__item:not([data-filter*="city3"]) span,
+input[type="checkbox"]#city4:checked ~ .filter__content .filter__item:not([data-filter*="city4"]) span{
+  opacity: 0.5;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+
+.show-item, input[type="checkbox"]#all:checked ~ .filter__content .filter__item[data-filter] {
+  visibility: visible;
+  width: 20%;
+  transition: 0s;
+}
+.show-item span, input[type="checkbox"]#all:checked ~ .filter__content .filter__item[data-filter] span {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.filter input[type="checkbox"]#all:focus ~ .filter__control .filter__button[for="all"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#room1:focus ~ .filter__control .filter__button[for="room1"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#room2:focus ~ .filter__control .filter__button[for="room2"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#room3:focus ~ .filter__control .filter__button[for="room3"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#room4:focus ~ .filter__control .filter__button[for="room4"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#price1:focus ~ .filter__control .filter__button[for="price1"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#price2:focus ~ .filter__control .filter__button[for="price2"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#price3:focus ~ .filter__control .filter__button[for="price3"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#price4:focus ~ .filter__control .filter__button[for="price4"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#available1:focus ~ .filter__control .filter__button[for="available1"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#available2:focus ~ .filter__control .filter__button[for="available2"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#available3:focus ~ .filter__control .filter__button[for="available3"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#available4:focus ~ .filter__control .filter__button[for="available4"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#campus1:focus ~ .filter__control .filter__button[for="campus1"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#campus2:focus ~ .filter__control .filter__button[for="campus2"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#campus3:focus ~ .filter__control .filter__button[for="campus3"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#campus4:focus ~ .filter__control .filter__button[for="campus4"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#city1:focus ~ .filter__control .filter__button[for="city1"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#city2:focus ~ .filter__control .filter__button[for="city2"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#city3:focus ~ .filter__control .filter__button[for="city3"] {
+  outline: #671E75 solid 1px;
+}
+.filter input[type="checkbox"]#city4:focus ~ .filter__control .filter__button[for="city4"] {
+  outline: #671E75 solid 1px;
+}
+
+
+.filter__control {
+  padding: 20px 0;
+  background: #fffaf6;
+  display: grid;
+  grid-column: 1 / 2;
+  grid-template-rows: auto auto auto auto auto auto 1fr;
+  height: 1310px;
+}
+.filter__control h3 {
+  padding: 0 20px 20px;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+}
+
+.filter__control p {
+  padding: 0 20px;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  font-size: 12px;
+}
+
+.filter__button {
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+.filter__button:before {
+  content: '';
+  display: block;
+  background: #671E75;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  transform: translateX(-10px);
+  transition: 0.2s ease-in-out;
+}
+.filter__button:hover {
+  padding-left: 25px;
+}
+.filter__button:hover:before {
+  transform: translateX(-5px);
+}
+
+
+
+.filter__button.disabled, input[type="checkbox"]#all:checked ~ .filter__control .filter__button:not([for="all"]) {
+  color: #ccc;
+  padding-left: 20px !important;
+  background: none !important;
+  cursor: default;
+  pointer-events: none;
+}
+.filter__button.disabled:before, input[type="checkbox"]#all:checked ~ .filter__control .filter__button:not([for="all"]):before {
+  background: #ccc;
+  opacity: 1;
+  transform: translateX(-10px) !important;
+}
+
+
+.filter__content {
+  width: 100%;
+}
+.filter__list {
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.filter__item {
+  position: relative;
+  width: 20%;
+  display: grid;
+  grid-column: auto;
+  grid-row: auto;
+  margin-top: 15px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.filter__item:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+.filter__item span {
+  display: grid;
+  grid-column: 2 / 3;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 300;
+  border-radius: 2px;
+  transition: 0.2s;
+  margin: 0 auto auto auto;
+  overflow: hidden;
+  font-size: 20px;
+  color: black;
+}
+
+
+.filter__item table {
+  visibility: hidden;
+  margin-bottom: -100vh;
+}
+
+.filter__item img {
+  width: 15vw;
+  border-radius: 10px;
+}
+
+
+
+
+input[type="checkbox"]#all:checked ~ .filter__control .filter__button[for="all"],
+input[type="checkbox"]#room1:checked ~ .filter__control .filter__button[for="room1"],
+input[type="checkbox"]#room2:checked ~ .filter__control .filter__button[for="room2"],
+input[type="checkbox"]#room3:checked ~ .filter__control .filter__button[for="room3"],
+input[type="checkbox"]#room4:checked ~ .filter__control .filter__button[for="room4"],
+input[type="checkbox"]#price1:checked ~ .filter__control .filter__button[for="price1"],
+input[type="checkbox"]#price2:checked ~ .filter__control .filter__button[for="price2"],
+input[type="checkbox"]#price3:checked ~ .filter__control .filter__button[for="price3"],
+input[type="checkbox"]#price4:checked ~ .filter__control .filter__button[for="price4"],
+input[type="checkbox"]#available1:checked ~ .filter__control .filter__button[for="available1"],
+input[type="checkbox"]#available2:checked ~ .filter__control .filter__button[for="available2"],
+input[type="checkbox"]#available3:checked ~ .filter__control .filter__button[for="available3"],
+input[type="checkbox"]#available4:checked ~ .filter__control .filter__button[for="available4"],
+input[type="checkbox"]#campus1:checked ~ .filter__control .filter__button[for="campus1"],
+input[type="checkbox"]#campus2:checked ~ .filter__control .filter__button[for="campus2"],
+input[type="checkbox"]#campus3:checked ~ .filter__control .filter__button[for="campus3"],
+input[type="checkbox"]#campus4:checked ~ .filter__control .filter__button[for="campus4"],
+input[type="checkbox"]#city1:checked ~ .filter__control .filter__button[for="city1"],
+input[type="checkbox"]#city2:checked ~ .filter__control .filter__button[for="city2"],
+input[type="checkbox"]#city3:checked ~ .filter__control .filter__button[for="city3"],
+input[type="checkbox"]#city4:checked ~ .filter__control .filter__button[for="city4"]
+ {
+  background: #eee;
+  padding-left: 20px;
+}
+
+input[type="checkbox"]#all:checked ~ input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]#all:checked ~ .filter__control .filter__button[for="all"]:before,
+input[type="checkbox"]#room1:checked ~ .filter__control .filter__button[for="room1"]:before,
+input[type="checkbox"]#room2:checked ~ .filter__control .filter__button[for="room2"]:before,
+input[type="checkbox"]#room3:checked ~ .filter__control .filter__button[for="room3"]:before,
+input[type="checkbox"]#room4:checked ~ .filter__control .filter__button[for="room4"]:before,
+input[type="checkbox"]#price1:checked ~ .filter__control .filter__button[for="price1"]:before,
+input[type="checkbox"]#price2:checked ~ .filter__control .filter__button[for="price2"]:before,
+input[type="checkbox"]#price3:checked ~ .filter__control .filter__button[for="price3"]:before,
+input[type="checkbox"]#price4:checked ~ .filter__control .filter__button[for="price4"]:before,
+input[type="checkbox"]#available1:checked ~ .filter__control .filter__button[for="available1"]:before,
+input[type="checkbox"]#available2:checked ~ .filter__control .filter__button[for="available2"]:before,
+input[type="checkbox"]#available3:checked ~ .filter__control .filter__button[for="available3"]:before,
+input[type="checkbox"]#available4:checked ~ .filter__control .filter__button[for="available4"]:before,
+input[type="checkbox"]#campus1:checked ~ .filter__control .filter__button[for="campus1"]:before,
+input[type="checkbox"]#campus2:checked ~ .filter__control .filter__button[for="campus2"]:before,
+input[type="checkbox"]#campus3:checked ~ .filter__control .filter__button[for="campus3"]:before,
+input[type="checkbox"]#campus4:checked ~ .filter__control .filter__button[for="campus4"]:before,
+input[type="checkbox"]#city1:checked ~ .filter__control .filter__button[for="city1"]:before,
+input[type="checkbox"]#city2:checked ~ .filter__control .filter__button[for="city2"]:before,
+input[type="checkbox"]#city3:checked ~ .filter__control .filter__button[for="city3"]:before,
+input[type="checkbox"]#city4:checked ~ .filter__control .filter__button[for="city4"]:before
+{
+  transform: translateX(0px);
+}
+
+
+.b {
+  position: fixed;
+  background-color: #eee;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  color: black;
+  display: none;
+  border-style: solid;
+  border-color: #671E75;
+  width: 225px;
+  height: 80vh;
+  top: 5%;
+  transition: all .2s ease-in-out;
+  cursor: default;
+}
+
+.b img {
+  display: grid;
+  margin: auto;
+  margin-top: 10px;
+}
+
+
+.b table {
+  visibility: visible;
+  height: 100%;
+  margin: auto;
+  cursor: default;
+}
+
+.b:hover {
+  display: grid;
+  transform: scale(1.05);
+  cursor: default;
+}
+
+.b img:hover {
+  opacity: 0.75;
+}
+
+
+.filter__item span:active ~ .b{
+display: grid;
+}
+
+.filter__item img:hover{
+opacity: 0.75;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  /* For tablet: */
+  #accomodationfinder nav > h1 {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    transform: rotate(-90deg) translateX(-100%) translateY(-100%);
+    max-height: 100%;
+    font-size: 32px;
+    white-space: nowrap;
+    margin-left: -60px;
+    margin-right: -60px;
+    position: absolute;
+  }
+
+  .filter__list {
+    list-style-type: none;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .filter__item img {
+    width: 20vw;
+    border-radius: 10px;
+  }
+
+  nav {
+    display: grid;
+    max-width: 100%;
+    background-color: #671E75;
+    height: 1500px;
+  }
+
+  .filter__control {
+    padding: 20px 0;
+    background: #fffaf6;
+    display: grid;
+    grid-column: 1 / 2;
+    grid-template-rows: auto auto auto auto auto auto 1fr;
+    height: 1460px;
+  }
+
+
+  .b {
+    position: fixed;
+    background-color: #eee;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 25% 75%;
+    color: black;
+    display: none;
+    border-style: solid;
+    border-color: #671E75;
+    width: 180px;
+    height: 85%;
+    top: 5%;
+    transition: all .2s ease-in-out;
+    cursor: default;
+  }
+
+  .b img {
+    display: grid;
+    margin-top: 10px;
+  }
+
+
+  .b table {
+    visibility: visible;
+    height: 100%;
+    margin: auto;
+    cursor: default;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+  #accomodationfinder {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
+  }
+
+
+  nav {
+    grid-row: 1 / 2;
+    display: grid;
+    width: 100vw;
+    background-color: #671E75;
+    grid-template-columns: 1fr 3fr;
+    height: 80px;
+  }
+
+  nav > a {
+    display: grid;
+    grid-column: 1 / 2;
+    padding-top: 10px;
+    grid-row: 1 / 2;
+  }
+
+  nav img {
+    display: grid;
+    max-width: 50px;
+    padding: 10%;
+  }
+
+  #accomodationfinder nav > h1 {
+    display: grid;
+    grid-column: 2 / 3;
+    max-height: 100%;
+    font-size: 20px;
+    transform: none;
+    padding-left: 40vw;
+    padding-top: 10px;
+  }
+
+  #accomodationfinder main {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2 / 3;
+    height: 1100px;
+    max-width: 80vw;
+    grid-template-rows: 2fr 4fr;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filter__content {
+    width: 100%;
+    grid-row: 2 / 3;
+  }
+
+  .filter__control {
+    grid-row: 1 / 2;
+    background: #fffaf6;
+    display: grid;
+    height: 30px;
+    width: 110vw;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 1fr;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-top: 0;
+    padding-bottom: 35px;
+    margin-left: -100%;
+  }
+
+  .filter__control h3 {
+    text-transform: uppercase;
+    color: #a2a2a2;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    grid-row: 1 / 2;
+    padding-top: 5px;
+  }
+
+  .filter__control p {
+    text-transform: uppercase;
+    color: #a2a2a2;
+    font-size: 12px;
+    grid-row: 1 / 2;
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 0;
+  }
+
+  .filter__button {
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    grid-row: 1 / 2;
+    width: 70px;
+    padding: 10px;
+    padding-top: 5px;
+  }
+
+  .cluster {
+    display: inline-grid;
+    grid-row: 1 / 2;
+  }
+
+
+      .filter__list{
+       list-style-type: none;
+       margin: auto;
+       display: flex;
+       flex-wrap: wrap;
+       width: 100%;
+       grid-row: 2 / 3;
+       grid-template-columns: 1fr 1fr;
+  }
+
+  .filter__item {
+    grid-column: 1 /2;
+    position: relative;
+    width: 100%;
+    display: grid;
+    cursor: pointer;
+    padding-bottom: 25px;
+
+  }
+
+  .filter__item img {
+    width: 30vw;
+    border-radius: 10px;
+  }
+
+  .filter__button:before {
+    content: '';
+    display: block;
+    background: #671E75;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transform: translateY(-10px);
+    transition: 0.2s ease-in-out;
+
+  }
+
+
+  .filter__button:hover {
+    padding:0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .filter__button:hover:before {
+    transform: translateY(0px);
+  }
+
+  .b img {
+    display: none;
+  }
+
+  .b a{
+    display: none;
+  }
+
+  .b {
+    height: 100%;
+  }
+
+
+  .filter__item .b {
+    display: grid;
+    position: relative;
+    grid-column: 2 / 3;
+  }
+
+
+  .hide-item, input[type="checkbox"]#room1:checked ~ .filter__content .filter__item:not([data-filter*="room1"]),
+  input[type="checkbox"]#room2:checked ~ .filter__content .filter__item:not([data-filter*="room2"]),
+  input[type="checkbox"]#room3:checked ~ .filter__content .filter__item:not([data-filter*="room3"]),
+  input[type="checkbox"]#room4:checked ~ .filter__content .filter__item:not([data-filter*="room4"]),
+  input[type="checkbox"]#price1:checked ~ .filter__content .filter__item:not([data-filter*="price1"]),
+  input[type="checkbox"]#price2:checked ~ .filter__content .filter__item:not([data-filter*="price2"]),
+  input[type="checkbox"]#price3:checked ~ .filter__content .filter__item:not([data-filter*="price3"]),
+  input[type="checkbox"]#price4:checked ~ .filter__content .filter__item:not([data-filter*="price4"]),
+  input[type="checkbox"]#available1:checked ~ .filter__content .filter__item:not([data-filter*="available1"]),
+  input[type="checkbox"]#available2:checked ~ .filter__content .filter__item:not([data-filter*="available2"]),
+  input[type="checkbox"]#available3:checked ~ .filter__content .filter__item:not([data-filter*="available3"]),
+  input[type="checkbox"]#available4:checked ~ .filter__content .filter__item:not([data-filter*="available4"]),
+  input[type="checkbox"]#campus1:checked ~ .filter__content .filter__item:not([data-filter*="campus1"]),
+  input[type="checkbox"]#campus2:checked ~ .filter__content .filter__item:not([data-filter*="campus2"]),
+  input[type="checkbox"]#campus3:checked ~ .filter__content .filter__item:not([data-filter*="campus3"]),
+  input[type="checkbox"]#campus4:checked ~ .filter__content .filter__item:not([data-filter*="campus4"]),
+  input[type="checkbox"]#city1:checked ~ .filter__content .filter__item:not([data-filter*="city1"]),
+  input[type="checkbox"]#city2:checked ~ .filter__content .filter__item:not([data-filter*="city2"]),
+  input[type="checkbox"]#city3:checked ~ .filter__content .filter__item:not([data-filter*="city3"]),
+  input[type="checkbox"]#city4:checked ~ .filter__content .filter__item:not([data-filter*="city4"]){
+    width: 0;
+    transition: 0s 0.2s;
+    display: none;          * SAVE FOR MOBILE VERSION*/
+  }
+
+}

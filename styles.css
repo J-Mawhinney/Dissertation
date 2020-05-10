@@ -1,0 +1,351 @@
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#index {
+display: grid;
+grid-template-columns: 1fr 7fr;
+grid-template-rows: 1fr 5fr;
+max-width: 100vw;
+max-height: 100vh;
+}
+
+nav {
+  max-width: 100%;
+  background-color: #671E75;
+  height: 100vh;
+}
+
+nav > img {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  max-width: 150px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+nav > h1 {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  transform: rotate(-90deg) translateX(-50%);
+  max-height: 100%;
+  font-size: 32px;
+  white-space: nowrap;
+  margin-left: -60px;
+  margin-right: -60px;
+}
+
+#index main {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  max-height: 100vh;
+  max-width: 100vw;
+  grid-template-rows: 1fr;
+}
+
+#oncampus {
+  display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1;
+    width: 100%;
+    height: 100vh;
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+}
+
+#offcampus {
+  display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1;
+    width: 100%;
+    height: 100vh;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+}
+
+#offcampus img {
+  height: 100%;
+  width: 115%;
+  filter: grayscale(100%);
+}
+
+#oncampus:hover img {
+  filter: none;
+}
+
+#offcampus:hover img {
+  filter: none;
+}
+
+
+#oncampus img {
+  height: 100%;
+  width: 120%;
+  filter: grayscale(100%);
+}
+
+#oncampus p {
+  position: absolute;
+  font-size: 50px;
+  color: #671E75;
+  top: 55%;
+  left: 20%;
+  transform: rotate(-28deg);
+}
+
+#offcampus p {
+  position: absolute;
+  font-size: 50px;
+  color: #671E75;
+  left: 75%;
+  top: 15%;
+  transform: rotate(-28deg);
+}
+
+#oncampus:hover p{
+  opacity: 100%;
+  font-weight: bold;
+  color: black;
+}
+
+#offcampus:hover p{
+  opacity: 100%;
+  font-weight: bold;
+  color: black;
+}
+
+
+
+
+/* OffCampus.html */
+
+#accomodationfinder {
+display: grid;
+grid-template-columns: 1fr 7fr;
+grid-template-rows: 1fr 5fr;
+max-width: 100vw;
+max-height: 100vh;
+}
+
+#accomodationfinder main {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  max-height: 100vh;
+  max-width: 100vw;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.properties {
+  display: grid;
+  grid-row: 6 / 7;
+  grid-column: 1 /  6;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-content: center;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.filtered {
+  border-style: inset;
+}
+
+.container img {
+  width: 80%;
+  margin: 5px;
+}
+#all:checked  ~ .properties .container .filtered{
+  display: grid;
+}
+
+
+.filtered, :not(#all):checked ~ .properties .container  .filtered{
+  display: none;
+}
+
+#rooms1:checked ~ .properties .container .rooms1,
+#rooms2:checked ~ .properties .container .rooms2,
+#rooms3:checked ~ .properties .container .rooms3,
+#rooms4:checked ~ .properties .container .rooms4
+{
+  display: grid;
+}
+
+
+
+#price1:checked ~ .properties .container .price1,
+#price2:checked ~ .properties .container .price2,
+#price3:checked ~ .properties .container .price3,
+#price4:checked ~ .properties .container .price1
+{
+  display: grid;
+}
+
+input {
+  display: none
+}
+
+label {
+  display: grid;
+  float:left;
+  width:3.0em;
+  background: grey;
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+input:checked + label {
+    background-color:#911;
+    color:#fff;
+}
+
+p {
+  float: left;
+  display: grid;
+  padding-left: 10px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  /* For tablet: */
+  #index {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 1fr 5fr;
+  max-width: 100vw;
+  max-height: 100vh;
+  }
+
+  nav > img {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    max-width: 90%;
+    margin: auto;
+    padding-top: 10px;
+  }
+
+  nav > h1 {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    transform: rotate(-90deg) translateX(-210px);
+    max-height: 100%;
+    font-size: 32px;
+    white-space: nowrap;
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+
+  #oncampus p {
+    position: absolute;
+    font-size: 50px;
+    color: #671E75;
+    left: 20%;
+    top: 50%;
+    transform: rotate(-40deg);
+  }
+
+  #offcampus p {
+    position: absolute;
+    font-size: 50px;
+    color: #671E75;
+    left: 60%;
+    top: 25%;
+    transform: rotate(-45deg);
+  }
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  /* For mobile phones: */
+
+  #index {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr 5fr;
+  max-width: 100vw;
+  max-height: 100vh;
+  }
+
+  nav > img {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    max-width: 90%;
+    margin: auto;
+    padding-top: 10px;
+  }
+
+  nav > h1 {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    transform: rotate(-90deg) translateX(-220px);
+    max-height: 100%;
+    font-size: 32px;
+    white-space: nowrap;
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+
+  #index main {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    max-height: 100vh;
+    max-width: 100vw;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #oncampus {
+    display: grid;
+    grid-row: 1 / 2;
+      width: 100%;
+      height: 100%;
+      clip-path: none;
+  }
+
+  #offcampus {
+    display: grid;
+    grid-row: 2 / 3;
+      width: 100%;
+      height: 100%;
+      clip-path: none;
+  }
+
+  #oncampus p {
+    position: absolute;
+    font-size: 50px;
+    color: #671E75;
+    left: 60%;
+    top: 15%;
+    transform: rotate(-28deg);
+  }
+
+  #offcampus p {
+    position: absolute;
+    font-size: 50px;
+    color: #671E75;
+    left: 60%;
+    top: 65%;
+    transform: rotate(-28deg);
+  }
+
+}
