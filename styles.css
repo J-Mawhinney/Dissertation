@@ -1,9 +1,12 @@
+/* This defines the overall conditions for the website screen height and wdth, along with allowing the scrolling to nbe enabled vertically but not horizontally */
 body {
   max-width: 100vw;
   max-height: 100vh;
   margin: 0;
   overflow: hidden;
 }
+
+/* The core grid is established which containes the navigation bar and the main container  */
 
 #index {
 display: grid;
@@ -13,12 +16,14 @@ max-width: 100vw;
 max-height: 100vh;
 }
 
+/*  sets the color and size of nav container */
 nav {
   max-width: 100%;
   background-color: #671E75;
   height: 100vh;
 }
 
+/*  styles and positions the logo */
 nav > img {
   display: grid;
   grid-column: 1 / 2;
@@ -28,18 +33,22 @@ nav > img {
   padding-top: 10px;
 }
 
+/*  styles and positions the heading */
 nav > h1 {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+    /* rorates and repositions the heading */
   transform: rotate(-90deg) translateX(-50%);
   max-height: 100%;
   font-size: 32px;
+    /*  prevents the heading from going onto two lines */
   white-space: nowrap;
   margin-left: -60px;
   margin-right: -60px;
 }
 
+/* Specifies the grid for the main container  */
 #index main {
   display: grid;
   grid-column: 2 / 3;
@@ -49,22 +58,31 @@ nav > h1 {
   grid-template-rows: 1fr;
 }
 
+/* Positions and resizes the oncampus image */
 #oncampus {
   display: grid;
   grid-row: 1 / 2;
   grid-column: 1;
     width: 100%;
     height: 100vh;
-  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%); /* Designs the container for the image - Top Left Right angle triangle*/
 }
 
+/* Positions and resizes the offcampus image */
 #offcampus {
   display: grid;
   grid-row: 1 / 2;
   grid-column: 1;
     width: 100%;
     height: 100vh;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);/* Designs the container for the image - Bottom Right Right angle triangle*/
+}
+
+/* Styles the image to open with greyscale filter applied */
+#oncampus img {
+  height: 100%;
+  width: 120%;
+  filter: grayscale(100%);
 }
 
 #offcampus img {
@@ -73,6 +91,7 @@ nav > h1 {
   filter: grayscale(100%);
 }
 
+/* Styles the image for when it is hovered on there is no longer a filter applied */
 #oncampus:hover img {
   filter: none;
 }
@@ -81,13 +100,7 @@ nav > h1 {
   filter: none;
 }
 
-
-#oncampus img {
-  height: 100%;
-  width: 120%;
-  filter: grayscale(100%);
-}
-
+/*Styles the text on the images */
 #oncampus p {
   position: absolute;
   font-size: 50px;
@@ -97,6 +110,7 @@ nav > h1 {
   transform: rotate(-28deg);
 }
 
+/*The pieces of text had to be styled seperately as they had to positioned individually*/
 #offcampus p {
   position: absolute;
   font-size: 50px;
@@ -106,6 +120,7 @@ nav > h1 {
   transform: rotate(-28deg);
 }
 
+/* on hover, the text turns black to indicate they are clickable */
 #oncampus:hover p{
   opacity: 100%;
   font-weight: bold;
@@ -118,107 +133,7 @@ nav > h1 {
   color: black;
 }
 
-
-
-
-/* OffCampus.html */
-
-#accomodationfinder {
-display: grid;
-grid-template-columns: 1fr 7fr;
-grid-template-rows: 1fr 5fr;
-max-width: 100vw;
-max-height: 100vh;
-}
-
-#accomodationfinder main {
-  display: grid;
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-  max-height: 100vh;
-  max-width: 100vw;
-  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.properties {
-  display: grid;
-  grid-row: 6 / 7;
-  grid-column: 1 /  6;
-}
-
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  align-content: center;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  margin: auto;
-}
-
-.filtered {
-  border-style: inset;
-}
-
-.container img {
-  width: 80%;
-  margin: 5px;
-}
-#all:checked  ~ .properties .container .filtered{
-  display: grid;
-}
-
-
-.filtered, :not(#all):checked ~ .properties .container  .filtered{
-  display: none;
-}
-
-#rooms1:checked ~ .properties .container .rooms1,
-#rooms2:checked ~ .properties .container .rooms2,
-#rooms3:checked ~ .properties .container .rooms3,
-#rooms4:checked ~ .properties .container .rooms4
-{
-  display: grid;
-}
-
-
-
-#price1:checked ~ .properties .container .price1,
-#price2:checked ~ .properties .container .price2,
-#price3:checked ~ .properties .container .price3,
-#price4:checked ~ .properties .container .price1
-{
-  display: grid;
-}
-
-input {
-  display: none
-}
-
-label {
-  display: grid;
-  float:left;
-  width:3.0em;
-  background: grey;
-  margin: 5px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-input:checked + label {
-    background-color:#911;
-    color:#fff;
-}
-
-p {
-  float: left;
-  display: grid;
-  padding-left: 10px;
-}
-
+/* Code for RESPONSIVENESS */
 
 @media only screen and (max-width: 900px) {
   /* For tablet: */
@@ -305,6 +220,9 @@ p {
     margin-right: -60px;
   }
 
+  /* Due to screen dimensions on a mobile device, layout of the homepage had to be changed.
+  This code changes the images from their angled positioning, to them being vertical from
+  one another */
   #index main {
     display: grid;
     grid-column: 2 / 3;
@@ -319,7 +237,7 @@ p {
     grid-row: 1 / 2;
       width: 100%;
       height: 100%;
-      clip-path: none;
+      clip-path: none; /*Had to be removed in order to make the images sit on top of one another */
   }
 
   #offcampus {

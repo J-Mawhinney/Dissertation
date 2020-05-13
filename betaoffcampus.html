@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Accomodation Finder | Off Campus (BETA)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="betastyles.css">
+<script src="script.js"></script>
+</head>
+<body id = "accomodationfinder">
+ <!-- The navigation section which contains the logo and title of the website. -->
+<nav>
+  <img src="images/logo.png" alt="Logo">
+  <h1> Accomodation Finder </h1>
+</nav>
+
+<main>
+  <!-- The filtering system, each chunk of code applies to the specific search criteria mentioned in the 'P' tag -->
+  <p> Price Range </p>
+
+  <input type="checkbox" id="price1">
+  <label for="price1"> 50 - 70pw </label>
+
+  <input type="checkbox" id="price2">
+  <label for="price2"> 70 - 90pw </label>
+
+  <input type="checkbox" id="price3">
+  <label for="price3"> 90 - 110pw </label>
+
+  <input type="checkbox" id="price4">
+  <label for="price4"> 110 - 130pw </label>
+
+
+<p> Number of Rooms </p>
+
+  <input type="checkbox"  id="all"  checked>
+  <label for="all" style="display: none;"> show all</label>
+
+  <input type="checkbox" id="rooms1">
+  <label for="rooms1"> 1 Room </label>
+
+  <input type="checkbox" id="rooms2">
+  <label for="rooms2"> 2 Rooms </label>
+
+  <input type="checkbox" id="rooms3">
+  <label for="rooms3"> 3 Rooms </label>
+
+  <input type="checkbox" id="rooms4">
+  <label for="rooms4"> 4 Rooms </label>
+
+
+<p> Rooms currently available: </p>
+
+    <input type="checkbox" id="available1">
+    <label for="available1"> 1 Room </label>
+
+    <input type="checkbox" id="available2">
+    <label for="available2"> 2 Rooms </label>
+
+    <input type="checkbox" id="available3">
+    <label for="available3"> 3 Rooms </label>
+
+    <input type="checkbox" id="available4">
+    <label for="available4"> 4+ Rooms </label>
+
+    <p> Distance from Campus: </p>
+
+    <input type="checkbox" id="unidistance1">
+    <label for="unidistance1"> less than 500ft </label>
+
+    <input type="checkbox" id="unidistance2">
+    <label for="unidistance2"> 500ft - 1000ft </label>
+
+    <input type="checkbox" id="unidistance3">
+    <label for="unidistance3"> 1000ft - 1500ft </label>
+
+    <input type="checkbox" id="unidistance4">
+    <label for="unidistance4"> 1500ft or more </label>
+
+
+  <p> Distance from Ormskirk City Centre: </p>
+
+    <input type="checkbox" id="citydistance1">
+    <label for="citydistance1"> less than 500ft </label>
+
+    <input type="checkbox" id="citydistance2">
+    <label for="citydistance2"> 500ft - 1000ft </label>
+
+    <input type="checkbox" id="citydistance3">
+    <label for="citydistance3"> 1000ft - 1500ft </label>
+
+    <input type="checkbox" id="citydistance4">
+    <label for="citydistance4"> 1500ft or more </label>
+
+
+<!-- The container for the property listings. This container would show the properties that the filter calls on. -->
+
+<section class = "properties">
+
+<section class="container">
+  <!-- Each property is filtered based on the appropriate elements within the filtered class.  -->
+  <section class="filtered price2 rooms1 available2 unidistance3 citydistance2">
+    <img src="images/property1.jpg" alt="">
+    <table>
+      <td> Property 1 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £92pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 1 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 2 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 1350ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 600ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </section>
+  <section class="filtered price3 rooms2 available1 unidistance3 citydistance1">
+    <img src="images/property2.jpg" alt="">
+    <table>
+      <td> Property 2 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £108pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 2 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 1 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 1000ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 350ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+
+   </section>
+  <section class="filtered price1 rooms3 available3 unidistance3 citydistance2">
+    <img src="images/property3.jpg" alt="">
+    <table>
+      <td> Property 3 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £69pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 3 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 3 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 1200ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 500ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+
+  </section>
+  <section class="filtered price4 rooms4 available1 unidistance1 citydistance1">
+    <img src="images/property4.jpg" alt="">
+    <table>
+      <td> Property 4 </td>
+      <tr>
+        <th> Price: </th>
+        <td> £135pw </td>
+      </tr>
+      <tr>
+        <th> Rooms: </th>
+        <td> 4 </td>
+      </tr>
+      <tr>
+        <th> Currently available Rooms: </th>
+        <td> 1 </td>
+      </tr>
+      <tr>
+        <th> Distance from Campus: </th>
+        <td> 200ft </td>
+      </tr>
+      <tr>
+        <th> Distance from City Centre: </th>
+        <td> 400ft </td>
+      </tr>
+      <tr>
+        <th> Property Type: </th>
+        <td> House </td>
+      </tr>
+      <tr>
+        <th> Landlord: </th>
+        <td> SSU Accomodations </td>
+      </tr>
+    </table>
+  </section>
+</section>
+</section>
+  </main>
+
+
+</body>
+</html>

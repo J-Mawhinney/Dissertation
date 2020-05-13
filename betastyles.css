@@ -1,0 +1,242 @@
+/* This defines the overall conditions for the website screen height and wdth, along with allowing the scrolling to nbe enabled vertically but not horizontally */
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+/* The core grid is established which containes the navigation bar and the main container  */
+#accomodationfinder {
+display: grid;
+grid-template-columns: 1fr 7fr;
+grid-template-rows: 1fr 5fr;
+max-width: 100vw;
+max-height: 100vh;
+}
+
+
+/*  sets the color and size of nav container */
+nav {
+  max-width: 100%;
+  background-color: #671E75;
+  height: 125vh;
+}
+
+/*  styles and positions the logo */
+nav > img {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  max-width: 150px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+/*  styles and positions the heading */
+nav > h1 {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  /* rorates and repositions the heading */
+  transform: rotate(-90deg) translateX(-50%);
+  max-height: 100%;
+  font-size: 32px;
+  /*  prevents the heading from going onto two lines */
+  white-space: nowrap;
+  margin-left: -60px;
+  margin-right: -60px;
+}
+
+
+/* Specifies the grid for the main container, dividing the filtering system and property listings into seperate containers  */
+#accomodationfinder main {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  max-height: 100vh;
+  max-width: 100vw;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/*  container for all property listings */
+.properties {
+  display: grid;
+  grid-row: 6 / 7;
+  grid-column: 1 /  6;
+}
+
+
+/* container for individual property listing */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-content: center;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+/* styling for individual filtered listing */
+.filtered {
+  border-style: inset;
+}
+
+/* styling for images of properties */
+
+.container img {
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+}
+
+/* Specifices that when the filtering has been set to show all, the properities will be display in the grid */
+#all:checked  ~ .properties .container .filtered{
+  display: grid;
+}
+
+/* Specifies that if filtering has not asked for show all, the propertiies will be hidden */
+.filtered, :not(#all):checked ~ .properties .container  .filtered{
+  display: none;
+}
+
+/* Specifics that if a specific filtering critieria is selected, it will display the properties that meet that criteria */
+#rooms1:checked ~ .properties .container .rooms1,
+#rooms2:checked ~ .properties .container .rooms2,
+#rooms3:checked ~ .properties .container .rooms3,
+#rooms4:checked ~ .properties .container .rooms4
+{
+  display: grid;
+}
+
+#price1:checked ~ .properties .container .price1,
+#price2:checked ~ .properties .container .price2,
+#price3:checked ~ .properties .container .price3,
+#price4:checked ~ .properties .container .price4
+{
+  display: grid;
+}
+
+#available1:checked ~ .properties .container .available1,
+#available2:checked ~ .properties .container .available2,
+#available3:checked ~ .properties .container .available3,
+#available4:checked ~ .properties .container .available4
+{
+  display: grid;
+}
+
+#unidistance1:checked ~ .properties .container .unidistance1,
+#unidistance2:checked ~ .properties .container .unidistance2,
+#unidistance3:checked ~ .properties .container .unidistance3,
+#unidistance4:checked ~ .properties .container .unidistance4
+{
+  display: grid;
+}
+
+#citydistance1:checked ~ .properties .container .citydistance1,
+#citydistance2:checked ~ .properties .container .citydistance2,
+#citydistance3:checked ~ .properties .container .citydistance3,
+#citydistance4:checked ~ .properties .container .citydistance4
+{
+  display: grid;
+}
+
+/* Hides the checkboxes which were used to enable the filtering system to work */
+
+input {
+  display: none
+}
+
+/* labels used to style the checkboxes to look like buttons */
+label {
+  display: grid;
+  float:left;
+  width:3.0em;
+  background: grey;
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Style for checkbox that has been active */
+input:checked + label {
+    background-color:#911;
+    color:#fff;
+}
+
+/* styling for p text */
+p {
+  float: left;
+  display: grid;
+  padding-left: 10px;
+}
+
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  nav {
+    max-width: 100%;
+    background-color: #671E75;
+    height: 160vh;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  /* For mobile phones: */
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  nav {
+    max-width: 100%;
+    background-color: #671E75;
+    height: 220vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  nav {
+    max-width: 100%;
+    background-color: #671E75;
+    height: 370vh;
+  }
+}
